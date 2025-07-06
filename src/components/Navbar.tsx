@@ -10,7 +10,7 @@ import LangToggler from "./LangToggler";
 import CTA from "../data/cta";
 import { ArrowBigDown, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import Backdrop from "./Backdrop";
+import Backdrop from "./core/Backdrop";
 import useScreen from "../hooks/useScreen";
 
 const Navbar = () => {

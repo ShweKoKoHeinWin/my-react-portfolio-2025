@@ -2,7 +2,7 @@ import HomeData from "../../data/home";
 import { motion } from "framer-motion";
 import { SpringTransition } from "../../utils";
 import AboutData from "../../data/about";
-import Button from "../../components/Button";
+import Button from "../../components/core/Button";
 import CTA from "../../data/cta";
 import { Link } from "react-router-dom";
 import { ROUTEs } from "../../constants";

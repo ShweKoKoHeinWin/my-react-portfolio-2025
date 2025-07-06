@@ -1,5 +1,5 @@
 import { Eye, X } from "lucide-react";
-import { useGlobalContext } from "../contexts/globalContext";
+import { useGlobalContext } from "../../contexts/globalContext";
 import Backdrop from "./Backdrop";
 import type { ReactNode } from "react";
 

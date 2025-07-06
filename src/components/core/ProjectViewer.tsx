@@ -1,11 +1,11 @@
-import { Eye, X } from "lucide-react";
-import { useGlobalContext } from "../contexts/globalContext";
+import { X } from "lucide-react";
+import { useGlobalContext } from "../../contexts/globalContext";
 import Backdrop from "./Backdrop";
 import type { ReactNode } from "react";
 import Carousel from "./Carousel";
 import Image from "./ImageViewer";
-import type { ProjectProp } from "../types";
-import CTA from "../data/cta";
+import type { ProjectProp } from "../../types";
+import CTA from "../../data/cta";
 
 const ProjectOpener = ({
     children,

@@ -1,6 +1,6 @@
-import Carousel from "../../components/Carousel";
-import Image from "../../components/ImageViewer";
-import Project from "../../components/ProjectViewer";
+import Carousel from "../../components/core/Carousel";
+import Image from "../../components/core/ImageViewer";
+import Project from "../../components/core/ProjectViewer";
 import { useGlobalContext } from "../../contexts/globalContext";
 import HomeData from "../../data/home";
 import { Categories } from "../../data/projects";

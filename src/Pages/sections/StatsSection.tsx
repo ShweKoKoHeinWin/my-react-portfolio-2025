@@ -1,4 +1,4 @@
-import { motion, scale } from "framer-motion";
+import { motion } from "framer-motion";
 import { SpringTransition } from "../../utils";
 import HomeData from "../../data/home";
 import { useGlobalContext } from "../../contexts/globalContext";
