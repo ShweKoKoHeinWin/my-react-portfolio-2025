@@ -89,7 +89,7 @@ export const MobileNavLink = ({ order, link, label, open, setOpen }: {order: num
             {/* Lantern Body */}
             <Link to={link}>
                 <motion.div
-                    className={`relative w-40 h-20 ${isActive ? 'rounded-full ring-2' : 'rounded-3xl'} bg-gradient-to-b from-skin  via-purple to-orange shadow-round hover:ring-2 ring-secondary group-hover:shadow-[0_0_40px_rgba(239,68,68,0.8)] transition-shadow duration-300`}
+                    className={`relative w-40 h-20 ${isActive ? 'rounded-full ring-2' : 'rounded-3xl'} bg-gradient-to-b from-skin  via-purple to-orange shadow-round hover:ring-2 ring-secondary group-hover:shadow-[0_0_40px_rgba(239,68,68,0.8)] transition-shadow duration-300 overflow-hidden`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                 >
@@ -104,6 +104,7 @@ export const MobileNavLink = ({ order, link, label, open, setOpen }: {order: num
                     </div>
 
                     {/* Decorative pattern */}
+                    {isActive && <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-1/2 bg-skin/50 shadow-xl shadow-light blur-sm"></div>}
                     <div className="absolute top-2 left-1/2 -translate-x-1/2 w-1/3 h-1 bg-skin rounded-full opacity-60" />
                     <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-1/3 h-1 bg-skin rounded-full opacity-60" />
                 </motion.div>

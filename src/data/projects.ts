@@ -1,0 +1,489 @@
+import { LANGs } from "../constants";
+import type { ProjectCategoryProp, ProjectProp } from "../types";
+
+export const Categories: ProjectCategoryProp = {
+    [LANGs.ENGLISH]: {
+        own: "Own",
+        company: "Company",
+        tutorial: "Tutorial",
+    },
+    [LANGs.MYANMAR]: {
+        own: "ကိုယ်ပိုင်",
+        company: "ကုမ္ပဏီ",
+        tutorial: "သင်ခန်းစာ",
+    },
+    colors: {
+        own: "blue",
+        company: "orange",
+        tutorial: "purple",
+    },
+};
+
+export const DiaryApp: ProjectProp = {
+    name: "SKK Diary App",
+    [LANGs.ENGLISH]: {
+        description:
+            "Keep track of your daily activites with this diary app. Organize entries, create collections, and share with friends—securely and easily.",
+        features: {
+            "📝 Diary Management": [
+                "Create, edit, view, and delete personal diary entries",
+                "Title, rich content, emotion status, categorization, file attachments with captions",
+                "Flexible search, filtering (emotion, category, date between), sorting(by title, category, datetime)",
+                "Add/remove entries to collections",
+                "Share entries with other users",
+            ],
+            "📚 Collection Management": [
+                "Create, edit, view, and delete collections",
+                "Title, Description, Diary Entries tagging",
+                "Flexiable search, filtering (date between), sorting(by title, datetime)",
+                "Share entries with other users",
+            ],
+            "🔗 Sharing Management": [
+                "Inbox - View all diaries and collections that have been shared with you by other users.",
+                "Outbox - Track diaries/collections you shared",
+                "Users - See a list of users you've interacted, View user profile and see what you shared/received",
+            ],
+            "📊 Dashboard": [
+                "Overview of total diaries, collections, categories, and emotional stats",
+                "Visual insights into diary activity and trends",
+            ],
+            "📅 Calendar View": [
+                "View diaries, shared, and received item counts by selected date",
+            ],
+        },
+        myContributions: "",
+    },
+    [LANGs.MYANMAR]: {
+        description:
+            "ဤဒိုင်ယာရီအက်ပ်နှင့်အတူ သင်၏နေစဥ်လှုပ်ရှားမှုများကို မှတ်တမ်းတင်ပါ။ မှတ်တမ်းစုစည်းများဖန်တီးပြီး မိတ်ဆွေဆီ ဘေးကင်းလုံခြုံစွာနှင့်လွယ်ကူစွာ မျှဝေလိုက်ပါ။",
+        features: {
+            "📝 ဒိုင်ယာရီ စီမံခန့်ခွဲမှု": [
+                "ဒိုင်ယာရီများကို ဖန်တီးခြင်း၊ ပြင်ဆင်ခြင်း၊ ကြည့်ရှုခြင်းနှင့် ဖျက်ခြင်း",
+                "ခေါင်းစဉ်၊ အကြောင်းအရာ၊ စိတ်ခံစားမှုအခြေအနေ၊ အမျိုးအစားခွဲခြားမှု၊ မှတ်ချက်ပါသောဖိုင်တွဲဖက်မှု",
+                "စိတ်ခံစားမှု၊ အမျိုးအစား၊ ရက်စွဲအကြားဖြင့် ရှာဖွေခြင်း၊ စီစစ်ခြင်း၊ ခေါင်းစဉ်၊ အမျိုးအစား၊ ရက်စွဲအချိန်ဖြင့် စဉ်ခြင်း",
+                "ဒိုင်ယာရီများကို စုစည်းမှုများထဲသို့ ထည့်ခြင်း/ဖယ်ရှားခြင်း",
+                "ဒိုင်ယာရီများကို အသုံးပြုသူများနှင့် မျှဝေခြင်း",
+            ],
+            "📚 စုစည်းမှု စီမံခန့်ခွဲမှု": [
+                "ဒိုင်ယာရီ စုစည်းမှုများကို ဖန်တီးခြင်း၊ ပြင်ဆင်ခြင်း၊ ကြည့်ရှုခြင်းနှင့် ဖျက်ခြင်း",
+                "ခေါင်းစဉ်၊ ဖော်ပြချက်၊ ဒိုင်ယာရီများ တပ်ဆင်ခြင်း",
+                "ရက်စွဲအပိုင်းခြားဖြင့် ရှာဖွေခြင်း၊ စီစစ်ခြင်း၊ ခေါင်းစဉ်၊ ရက်စွဲအချိန်ဖြင့် စဉ်ခြင်း",
+                "စုစည်းမှုများကို အသုံးပြုသူများနှင့် မျှဝေခြင်း",
+            ],
+            "🔗 မျှဝေမှု စီမံခန့်ခွဲမှု": [
+                "📥 အဝင်များ - အခြားအသုံးပြုသူများက မျှဝေထားသော ဒိုင်ယာရီနှင့် စုစည်းမှုများကို ကြည့်ရှုနိုင်သည်",
+                "📤 အထွက်များ - မိမိက မျှဝေထားသော ဒိုင်ယာရီနှင့် စုစည်းမှုများကို ခြေရာခံနိုင်သည်",
+                "👥 အသုံးပြုသူများ - မျှဝေမှု/လက်ခံမှုဖြင့် ဆက်သွယ်ထားသော အသုံးပြုသူများစာရင်း၊ အသုံးပြုသူအချက်အလက်နှင့် မျှဝေ/လက်ခံထားသော ဒိုင်ယာရီနှင့် စုစည်းမှုများကို ကြည့်ရှုနိုင်သည်",
+            ],
+            "📊 ဒက်ရှ်ဘုတ် (Dashboard)": [
+                "စုစုပေါင်း ဒိုင်ယာရီ၊ စုစည်းမှု၊ အမျိုးအစား စသည့်အချက်အလက်များကို တစ်နေရာတည်းတွင် ကြည့်ရှုနိုင်သည်",
+                "ဒိုင်ယာရီများ၏ စိတ်ခံစားမှုအခြေအနေများ၊ အမျိုးအစားများအပေါ် အခြေခံပြီး အချက်အလက်များကို သုံးသပ်နိုင်သည်",
+            ],
+            "📅 ပြက္ခဒိန်စာမျက်နှာ": [
+                "ရွေးချယ်ထားသောရက်စွဲအပေါ် မူတည်၍ ဖန်တီးထားသော ဒိုင်ယာရီများ၊ မျှဝေထားသော/လက်ခံထားသော အရေအတွက်များကို ပြသသည်",
+            ],
+        },
+        myContributions: "",
+    },
+    techStack: ["react", "inertia", "tailwind", "shadcn", "laravel", "sqlite"],
+    category: "own",
+    photos: [
+        "Dashboard.png",
+        "Calendar.png",
+        "DiaryEdit.png",
+        "DiaryList.png",
+        "DiaryCollection.png",
+        "DiaryShare.png",
+        "CollectionList.png",
+        "CategoryList.png",
+        "EmotionList.png",
+        "Shared.png",
+        "UserDetail.png",
+        "UserList.png",
+    ],
+};
+
+export const RiceMillApp: ProjectProp = {
+    name: "TDP RiceMill App",
+
+    [LANGs.ENGLISH]: {
+        description:
+            "A comprehensive rice mill management system that streamlines product tracking, production workflows, warehouse operations, sales transactions, and financial records — all in one place.",
+        features: {
+            "🧩 Product Management": [
+                "Add/edit products with fields such as name, category, cost, price, quantity, warning quantity, tax, unit, and image",
+                "Maintain price history and update daily prices",
+                "Manually adjust product quantities",
+            ],
+            "🔄 Sales, Returns, and Purchase Management": [
+                "Record all sales, purchases, and return transactions",
+                "Automatically calculate product stock levels",
+                "Track partial shipments and arrivals",
+                "Flexible pricing, cost adjustments, and discount handling",
+            ],
+            "🏭 Rice Milling Management": {
+                "Client Milling": [
+                    "Start: Select client, record raw materials (name, quantity, unit)",
+                    "Finish: Record service fees, payments, main and side product outcomes, and assign warehouse storage",
+                ],
+                "Own Milling": [
+                    "Start: Select raw products and record quantity and cost at the time",
+                    "Finish: Record service fees and outcome products (quantities only)",
+                    "Calculate Cost: Use formulas to compute new cost based on raw material pricing (current, initial, or custom)",
+                ],
+            },
+            "🏬 Warehouse Management": [
+                "Create warehouse records with client, duration, warehouse number/name, product list, quantity, unit, and fees",
+                "Support multiple product withdrawals and additions by client",
+                "Manage presale and refill presale products from by rice mill",
+            ],
+            "📅 Payment & Loan Management": [
+                "Record various transaction types (cash, credit, bank transfer, product-based)",
+                "Track client debts and loans related to rice milling services",
+            ],
+            "👥 Client Data Management": [
+                "Store client information (name, address, email, phone numbers)",
+                "View related activities: sales, purchases, milling, warehouse rentals, and loans",
+            ],
+            "📊 Reports": [
+                "Profit Reports: View totals for sales, purchases, milling, warehouse, expenses, and received payments within a selected date range",
+                "Payment Reports: Consolidated view of all payments across modules",
+            ],
+            "📄 Account Statement": [
+                "Generate financial statements summarizing daily transactions",
+            ],
+            "👨‍💼 Staff & Permissions": [
+                "Manage staff roles and assign permissions based on responsibilities",
+            ],
+            "🏢 Multi-Miller Support": [
+                "Support for multiple independent millers with full feature access",
+            ],
+            "🌐 Language Support": [
+                "Available in English and Burmese for user convenience",
+            ],
+        },
+        myContributions:
+            "As a freelancer, I inherited a mini-market management app and transformed it into a full-featured, multi-miller rice milling platform. I fixed existing bugs and added key modules including milling tracking, warehouse control, loan management, account statements, and real-time product net weight calculations. Over 7 months, I worked closely with the client to fulfill their evolving needs, implementing numerous small but essential features along the way.",
+    },
+    [LANGs.MYANMAR]: {
+        description:
+            "ထုတ်ကုန်စီမံခန့်ခွဲမှု၊ ထုတ်လုပ်မှုလုပ်ငန်းစဉ်များ၊ ဂိုဒေါင်စီမံခန့်ခွဲမှု၊ ရောင်းဝယ်မှုလုပ်ငန်းများနှင့် ငွေကြေးမှတ်တမ်းများကို တစ်နေရာတည်းတွင် စနစ်တကျ စီမံနိုင်သော စပါးစက်လုပ်ငန်းအတွက် စုံလင်သောစီမံခန့်ခွဲမှုစနစ်ဖြစ်သည်။",
+        features: {
+            "🧩 ထုတ်ကုန် စီမံခန့်ခွဲမှု": [
+                "ထုတ်ကုန်အသစ်ထည့်ခြင်း/ပြင်ဆင်ခြင်း (အမည်၊ အမျိုးအစား၊ စျေးနှုန်း၊ ပမာဏ၊ အခွန်၊ တစ်ခုချင်းယူနစ်၊ ဓာတ်ပုံ)",
+                "စျေးနှုန်းမှတ်တမ်းများ ထိန်းသိမ်းခြင်းနှင့် နေ့စဉ်စျေးနှုန်းများ ပြင်ဆင်နိုင်ခြင်း",
+                "လက်ကျန်ပမာဏကို ကိုယ်တိုင် ပြင်ဆင်နိုင်ခြင်း",
+            ],
+            "🔄 ရောင်းဝယ်မှုနှင့် ပြန်အမ်း စီမံခန့်ခွဲမှု": [
+                "ရောင်းဝယ်မှု၊ ဝယ်ယူမှုနှင့် ပြန်အမ်းမှတ်တမ်းများ မှတ်တမ်းတင်ခြင်း",
+                "လက်ကျန်ပစ္စည်းအရေအတွက်ကို အလိုအလျောက်တွက်ချက်ပေးခြင်း",
+                "ပစ္စည်းအပိုင်းပိုင်း ပို့ခြင်း/လက်ခံခြင်းများ မှတ်တမ်းတင်နိုင်ခြင်း",
+                "စျေးနှုန်း၊ တန်ဖိုး၊ လျှော့စျေးများကို လိုအပ်သလို ပြင်ဆင်တွက်ချက်နိုင်ခြင်း",
+            ],
+            "🏭 စပါးစက်လုပ်ငန်း စီမံခန့်ခွဲမှု": {
+                "ဖောက်သည် စက်မှု": [
+                    "စတင်ခြင်း - ဖောက်သည်ရွေးချယ်ခြင်း၊ အမည်၊ ပမာဏ၊ ယူနစ်အပါအဝင် အမဲစပါးမှတ်တမ်းတင်ခြင်း",
+                    "ပြီးဆုံးခြင်း - ဝန်ဆောင်ခ၊ ငွေပေးချေမှု၊ အဓိကထွက်ကုန်နှင့် ဘေးထွက်ကုန်များ၊ ဂိုဒေါင်သို့သိမ်းဆည်းခြင်း",
+                ],
+                "ကိုယ်ပိုင် စက်မှု": [
+                    "စတင်ခြင်း - အမဲစပါးရွေးချယ်ခြင်း၊ ပမာဏနှင့် စျေးနှုန်း မှတ်တမ်းတင်ခြင်း",
+                    "ပြီးဆုံးခြင်း - ဝန်ဆောင်ခနှင့် ထွက်ကုန်များ (ပမာဏသာ) မှတ်တမ်းတင်ခြင်း",
+                    "ကုန်ကျစရိတ်တွက်ချက်ခြင်း - စနစ်တကျ ဖော်မြူလာဖြင့် ထပ်မံတွက်ချက်နိုင်ခြင်း (လက်ရှိ၊ စတင်ချိန်၊ သတ်မှတ်စျေးနှုန်း)",
+                ],
+            },
+            "🏬 ဂိုဒေါင် စီမံခန့်ခွဲမှု": [
+                "ဖောက်သည်၊ သတ်မှတ်ကာလ၊ ဂိုဒေါင်နံပါတ်/အမည်၊ ထုတ်ကုန်စာရင်း၊ ပမာဏ၊ ယူနစ်၊ ငွေကြေးအချက်အလက်များဖြင့် ဂိုဒေါင်မှတ်တမ်းဖန်တီးခြင်း",
+                "ဖောက်သည်အလိုက် ထုတ်ကုန်ထည့်ခြင်း/ထုတ်ယူခြင်းများကို ထပ်ခါတလဲလဲ ပြုလုပ်နိုင်ခြင်း",
+                "စပါးစက်မှ Presale နှင့် Refill Presale ထုတ်ကုန်များ စီမံနိုင်ခြင်း",
+            ],
+            "📅 ငွေပေးချေမှုနှင့် ချေးငွေ စီမံခန့်ခွဲမှု": [
+                "ငွေပေးချေမှုအမျိုးမျိုး (ငွေသား၊ ခရက်ဒစ်၊ ဘဏ်လွှဲ၊ ထုတ်ကုန်ဖြင့်) မှတ်တမ်းတင်ခြင်း",
+                "ဖောက်သည်အလိုက် ချေးငွေ/အကြွေးများကို စနစ်တကျ စီမံနိုင်ခြင်း",
+            ],
+            "👥 ဖောက်သည်အချက်အလက် စီမံခန့်ခွဲမှု": [
+                "ဖောက်သည်အချက်အလက်များ (အမည်၊ လိပ်စာ၊ အီးမေးလ်၊ ဖုန်းနံပါတ်များ)",
+                "ဆက်စပ်လုပ်ဆောင်မှုများ (ရောင်းဝယ်မှု၊ ဝယ်ယူမှု၊ စက်မှုလုပ်ငန်း၊ ဂိုဒေါင်ငှားမှု၊ ချေးငွေ)",
+            ],
+            "📊 အစီရင်ခံစာများ": [
+                "အမြတ်အစွန်းအစီရင်ခံစာ - ရောင်းဝယ်မှု၊ ဝယ်ယူမှု၊ စက်မှုလုပ်ငန်း၊ ဂိုဒေါင်၊ အသုံးစရိတ်၊ ငွေလက်ခံမှုများကို ရက်စွဲအလိုက် ကြည့်ရှုနိုင်ခြင်း",
+                "ငွေပေးချေမှုအစီရင်ခံစာ - များစွာသောလုပ်ဆောင်မှုများအတွက် ငွေပေးချေမှုများကို တစ်နေရာတည်းတွင် ကြည့်ရှုနိုင်ခြင်း",
+            ],
+            "📄 အကောင့်စာရင်း": [
+                "နေ့စဉ်လုပ်ဆောင်မှုများအတွက် ငွေကြေးစာရင်းများ ပြုလုပ်နိုင်ခြင်း",
+            ],
+            "👨‍💼 ဝန်ထမ်းနှင့် ခွင့်ပြုချက် စီမံခန့်ခွဲမှု": [
+                "ဝန်ထမ်းအလိုက် တာဝန်ခန့်ထားခြင်းနှင့် ခွင့်ပြုချက်များ သတ်မှတ်နိုင်ခြင်း",
+            ],
+            "🏢 စပါးစက်အများအပြား စနစ်": [
+                "စနစ်တစ်ခုတည်းဖြင့် စီမံနိုင်သော စက်များအများအပြားကို ထောက်ပံ့နိုင်ခြင်း",
+            ],
+            "🌐 ဘာသာစကား ထောက်ပံ့မှု": [
+                "အသုံးပြုသူအဆင်ပြေစေရန် English နှင့် မြန်မာဘာသာများ ထောက်ပံ့ထားသည်",
+            ],
+        },
+        myContributions:
+            "အလွတ်တန်းကုတ်ရေးသူအဖြစ် စျေးဝယ်စနစ်အသေးစားတစ်ခုကို လက်ခံရရှိပြီးနောက်၊ စနစ်တစ်ခုလုံးကို စပါးစက်လုပ်ငန်းအတွက် အပြည့်အဝ အသုံးပြုနိုင်သော စနစ်အဖြစ် ပြောင်းလဲဖန်တီးခဲ့ပါသည်။ ရှိပြီးသားအမှားများကို ပြင်ဆင်ပြီး Milling Tracking, Warehouse Control, Loan Management, Account Statements, နှင့် ထုတ်ကုန်အလေးချိန်တွက်ချက်မှုများအပါအဝင် အရေးကြီးသော module များကို ထည့်သွင်းခဲ့ပါသည်။ ၇ လကြာအတွင်း Client ၏လိုအပ်ချက်များကို ဖြည့်ဆည်းနိုင်ရန် အနည်းငယ်သော feature များအပါအဝင် များစွာသောလုပ်ဆောင်မှုများကို တစ်ဦးတည်းဖြင့် တာဝန်ယူပြီး တည်ဆောက်ခဲ့ပါသည်။",
+    },
+    techStack: ["livewire", "laravel", "mysql", "bootstrap", "jquery"],
+    category: "company",
+    photos: [
+        "ProductCreate.png",
+        "ProductAdjustment.png",
+        "ProductList.png",
+        "UnitLIst.png",
+        "CurrencyList.png",
+        "AccountCashInOut.png",
+        "AccountStatementList.png",
+        "ClientDetail1.png",
+        "ClientLoan.png",
+        "ClientList.png",
+        "SaleCreate.png",
+        "PurchaseList.png",
+        "PurchasePayment.png",
+        "PurchaseCreate1.png",
+        "PurchaseCreate2.png",
+        "PurchaseDetail2.png",
+        "PurchaseDelivery.png",
+        "MillingList.png",
+        "MillingCreate.png",
+        "MillingOutcome1.png",
+        "MillingOutcome2.png",
+        "MillingDetail1.png",
+        "MillingDetail2.png",
+        "WarehouseCreate.png",
+        "WarehouseInventory.png",
+        "WarehouseList.png",
+        "StaffCreate.png",
+        "StaffLIst.png",
+        "Counting.png",
+        "CountingCreate.png",
+        "StoreCreate.png",
+        "ProfitReport.png",
+        "PaymentReport.png",
+        "Dashboard.png",
+        "ExpenseList.png",
+        "Permission1.png",
+        "Permission2.png",
+        "Setting.png",
+    ],
+};
+
+export const RealEstateApp: ProjectProp = {
+    name: "TDP Real Estate",
+    [LANGs.ENGLISH]: {
+        description:
+            "A full-featured real estate management platform for handling property sales, rentals, client offers, third-party shops, and admin approvals — all in one client/admin system.",
+        features: {
+            "🏠 Property Listings (Sale / Rent / New Points)": [
+                "Add/edit properties with details: title, home type (apartment/villa), ownership type, price, area (sq ft), land area, floors, bedrooms, bathrooms.",
+                "Location data: city, township, address, geographic coordinates (Google Maps integration).",
+                "Nearby amenities: schools, hospitals, markets (tagged for searchability).",
+                "Facilities, available appointment time, and remarks.",
+                "Status tracking: Available, Sale/Rent Closed, Rejected (with reason).",
+            ],
+            "💰 Offers & Deals": [
+                "Buy/Rent Offers: Clients submit requirements (city, budget, home type).",
+                "Auto-suggest: System matches client needs with available properties and suggests them to admin for client follow-up.",
+            ],
+            "🛒 Third-Party Seller Integration": {
+                "Real Estates": [
+                    "Clients can submit sale/rent/new property listings.",
+                    "Admins can approve or reject submitted properties.",
+                ],
+                Shops: ["Clients can open shops and display their products."],
+                Common: [
+                    "Clients must purchase a package to list items.",
+                    "Visitors can leave remarks and ratings.",
+                ],
+            },
+            "📰 Knowledge Base": [
+                "CRUD for news/articles about real estate trends.",
+                "Manage reference data: cities, townships, home types, ownership types, schools, hospitals, markets.",
+            ],
+            "🛠️ Admin Tools": [
+                "Staff & permissions: Role-based access for admins, agents, and vendors.",
+                "Package management: Subscription plans for third-party sellers.",
+                "Site settings: Logos, banners, about page content.",
+            ],
+        },
+        myContributions:
+            "Junior developer maintaining a real estate platform—fixed bugs, added features, and rebuilt the client UI for a new company.",
+    },
+    [LANGs.MYANMAR]: {
+        description:
+            "အိမ်ခြံမြေ ရောင်း/ငှားမှုများ၊ ဖောက်သည်တောင်းဆိုမှုများ၊ Third-party ဆိုင်များနှင့် အက်မင်အတည်ပြုမှုများကို တစ်နေရာတည်းတွင် စနစ်တကျ စီမံနိုင်သော စုံလင်သော အိမ်ခြံမြေစီမံခန့်ခွဲမှုစနစ်ဖြစ်သည်။",
+        features: {
+            "🏠 အိမ်ခြံမြေစာရင်း (ရောင်း/ငှား/အသစ်ထည့်သွင်းမှု)": [
+                "အိမ်ခြံမြေများကို ထည့်သွင်း/ပြင်ဆင်နိုင်ခြင်း (ခေါင်းစဉ်၊ အိမ်အမျိုးအစား၊ ပိုင်ဆိုင်မှုအမျိုးအစား၊ စျေးနှုန်း၊ ဧရိယာ၊ မြေဧရိယာ၊ အထပ်အရေအတွက်၊ အိပ်ခန်း/ရေချိုးခန်းအရေအတွက်)",
+                "တည်နေရာအချက်အလက်များ (မြို့၊ မြို့နယ်၊ လိပ်စာ၊ မြေပုံကိုဩဒိနိတ်)",
+                "အနီးအနားအဆင်ပြေမှုများ (ကျောင်း၊ ဆေးရုံ၊ စျေးကွက်)",
+                "အဆင်ပြေမှုများ၊ ချိန်းဆိုချိန်၊ မှတ်ချက်များ",
+                "အခြေအနေ: ရနိုင်သည်၊ ရောင်းပြီး/ငှားပြီး၊ ငြင်းပယ် (အကြောင်းပြချက်ဖြင့်)",
+            ],
+            "💰 တောင်းဆိုမှုများနှင့် အကြံပြုမှုများ": [
+                "ဖောက်သည်များမှ ရောင်း/ငှားလိုအပ်ချက်များ (မြို့၊ ဘတ်ဂျက်၊ အိမ်အမျိုးအစား) တင်သွင်းနိုင်သည်။",
+                "စနစ်မှ လိုအပ်ချက်နှင့် ကိုက်ညီသော အိမ်ခြံမြေများကို ရှာဖွေပြီး အက်မင်ထံ အကြံပြုပေးသည်။",
+            ],
+            "🛒 Third-Party ရောင်းသူများအတွက် စနစ်": {
+                အိမ်ခြံမြေများ: [
+                    "ဖောက်သည်များသည် ရောင်း/ငှား/အသစ်ထည့်သွင်းမှုများ တင်သွင်းနိုင်သည်။",
+                    "အက်မင်မှ အတည်ပြု/ငြင်းပယ်နိုင်သည်။",
+                ],
+                ဆိုင်များ: [
+                    "ဖောက်သည်များသည် မိမိဆိုင်ဖွင့်ပြီး ပစ္စည်းများ ပြသနိုင်သည်။",
+                ],
+                အထွေထွေ: [
+                    "ပစ္စည်းရောင်းရန်အတွက် Package ဝယ်ယူရန်လိုအပ်သည်။",
+                    "ဧည့်သည်များမှ မှတ်ချက်များနှင့် အဆင့်သတ်မှတ်နိုင်သည်။",
+                ],
+            },
+            "📰 အသိပညာဗဟုသုတ": [
+                "အိမ်ခြံမြေစျေးကွက်သတင်း/ဆောင်းပါးများ CRUD",
+                "အခြေခံအချက်အလက်များ စီမံခန့်ခွဲမှု (မြို့၊ မြို့နယ်၊ အိမ်အမျိုးအစား၊ ပိုင်ဆိုင်မှုအမျိုးအစား၊ ကျောင်း၊ ဆေးရုံ၊ စျေးကွက်)",
+            ],
+            "🛠️ အက်မင်စနစ်များ": [
+                "ဝန်ထမ်းနှင့် ခွင့်ပြုချက်များ (အက်မင်၊ အေးဂျင့်၊ ရောင်းသူများအတွက်)",
+                "Package စီမံခန့်ခွဲမှု (Third-party ရောင်းသူများအတွက် စာရင်းသွင်းစနစ်)",
+                "ဆိုက်အပြင်အဆင်များ (လိုဂို၊ ဘန်နာ၊ အကြောင်းအရာစာမျက်နှာ)",
+            ],
+        },
+        myContributions:
+            "Junior Developer အဖြစ် အိမ်ခြံမြေစနစ်တစ်ခုကို ပြုပြင်ထိန်းသိမ်းခြင်း၊ အမှားများပြင်ဆင်ခြင်း၊ အသစ်သောအင်္ဂါရပ်များ ထည့်သွင်းခြင်းနှင့် Client UI ကို ပြန်လည်တည်ဆောက်ခြင်းများ ပြုလုပ်ခဲ့ပါသည်။",
+    },
+
+    techStack: ["laravel", "blade", "bootstrap", "jquery", "backpack", "mysql"],
+    category: "company",
+    photos: [
+        "SaleList.png",
+        "RentList.png",
+        "NewPropertyList.png",
+        "SaleCreate1.png",
+        "SaleCreate2.png",
+        "SaleCreate3.png",
+        "SaleClose.png",
+        "SaleReject.png",
+        "SaleAppointment.png",
+        "RentAppointment.png",
+        "AdminUser.png",
+        "FrontendUsers.png",
+        "Roles.png",
+        "HomeSale.png",
+        "RentOffer.png",
+        "HomeFilter.png",
+        "Map.png",
+        "HomeType.png",
+        "OwnerShipTypes.png",
+        "CompanyTypes.png",
+        "Currency.png",
+        "PopularPlace.png",
+        "Hospitals.png",
+        "Schools.png",
+        "Lawyers.png",
+        "Knowledge.png",
+        "KnowledgeAdmin.png",
+        "HomeBanner.png",
+        "Footer.png",
+        "Dashboard.png",
+    ],
+};
+
+export const ShweAutomobile: ProjectProp = {
+    name: "Shwe Automobile",
+    [LANGs.ENGLISH]: {
+        description:
+            "A modern automobile showroom platform with a client-facing vehicle showcase, maintenance service requests, and a backend for managing vehicles, brands, users, and homepage content — complete with member notifications and role-based access.",
+        features: {
+            "🏠 Frontend Pages": [
+                "Home Page: Hero section, About Us, Contact Form",
+                "Vehicle Showcase: List all available cars by brand/category",
+                "Vehicle Detail Page: Full specs, images, pricing",
+                "Maintenance Services: View service plans & customize options",
+                "Member Access: Exclusive updates & new arrival notifications",
+            ],
+            "🛠️ Management": {
+                "🚗 Vehicle Management": [
+                    "Add, edit, delete vehicle brands, categories, and models",
+                    "Manage vehicle specs: title, price, year, engine, images, status",
+                    "Filtering by brand, category, availability",
+                    "Highlight featured vehicles on homepage",
+                ],
+                "🔧 Maintenance Plans": [
+                    "Admin manages standard service packages",
+                    "Clients can customize services based on their needs",
+                    "Track client bookings and service history",
+                ],
+                "🔐 User Roles & Memberships": [
+                    "Public users can browse vehicles",
+                    "Members get real-time updates on new arrivals",
+                    "Admin manages user roles and permissions",
+                ],
+                "⚙️ Frontend Management": [
+                    "Banner text & video",
+                    "About company text and avaliable vehicle brands",
+                    "Contact informations",
+                ],
+            },
+        },
+        myContributions: "",
+    },
+    [LANGs.MYANMAR]: {
+        description:
+            "မော်တော်ယာဉ်ပြပွဲစနစ်တစ်ခုဖြစ်ပြီး၊ မိတ်ဆွေအတွက် ယာဉ်စာရင်းကြည့်ရှုခြင်း၊ ပြုပြင်ထိန်းသိမ်းမှုဝန်ဆောင်မှုတောင်းဆိုခြင်းနှင့် အက်မင်ဘက်မှ ယာဉ်များ၊ အမှတ်တံဆိပ်များ၊ ဝန်ထမ်းများနှင့် မူလစာမျက်နှာအကြောင်းအရာများကို စီမံခန့်ခွဲနိုင်သော စနစ်ဖြစ်သည်။ အသစ်ထွက်မည့်ယာဉ်များအတွက် အသိပေးချက်များလည်း ပါဝင်သည်။",
+        features: {
+            "🏠 မျက်နှာစာမျက်နှာများ": [
+                "ဟီရိုဓာတ်ပုံ၊ ကုမ္ပဏီအကြောင်းအရာ၊ ဆက်သွယ်ရန်ပုံစံ",
+                "ကားစာရင်းစာမျက်နှာ - ကားများစာရင်းကို ကြည့်ရှုခြင်း",
+                "ကားအသေးစိတ်စာမျက်နှာ - အလုပ်လုပ်ပုံ၊ ဈေးနှုန်း၊ ဓာတ်ပုံများ",
+                "ဝန်ဆောင်မှုစာမျက်နှာ - ဝန်ဆောင်မှုအစီအစဉ်များနှင့် ပုဂ္ဂလိကဝန်ဆောင်မှုများ",
+                "ဝယ်သူများအတွက် အဖွဲ့ဝင်စာရင်းထဲသို့ဝင်ရောက်ခြင်းနှင့် အသစ်များကိုအသိပေးခြင်း",
+            ],
+            '🛠️ စီမံခန့်ခွဲမှု': {
+                "🚗 ကားစီမံခန့်ခွဲမှု": [
+                    "ကားများအား ဖန်တီးခြင်း၊ ပြင်ဆင်ခြင်း၊ ဖျက်ခြင်း",
+                    "ကားအမျိုးအစား၊ ကားအမှတ်တံဆိပ်များစီမံခန့်ခွဲခြင်း",
+                    "ကားများကို ကြည့်ရှုခြင်းအတွက် စီစစ်ခြင်း (အမှတ်တံဆိပ်၊ အမျိုးအစားအလိုက်)",
+                    "မိမိကြိုက်နှစ်သက်သောကားများကို စာရင်းသွင်းခြင်း",
+                ],
+                "🔧 ဝန်ဆောင်မှုစီမံခန့်ခွဲမှု": [
+                    "ဝန်ဆောင်မှုအစီအစဉ်များကို စီမံခန့်ခွဲခြင်း",
+                    "ဝယ်သူများက ဝန်ဆောင်မှုကို ပုဂ္ဂလိကအစီအစဉ်ဖြင့် ပြင်ဆင်နိုင်ခြင်း",
+                    "ဝန်ဆောင်မှုစာရင်းများကို စီမံခန့်ခွဲခြင်း",
+                ],
+                "🔐 ဝယ်သူနှင့် ဝန်ထမ်းစီမံခန့်ခွဲမှု": [
+                    "အသုံးပြုသူများကို အမျိုးအစားခွဲခြင်း",
+                    "အဖွဲ့ဝင်များအတွက် အသစ်ထွက်ရှိသောကားများကို အသိပေးခြင်း",
+                    "ဝန်ထမ်းများကို တာဝန်ခွဲဝေပေးခြင်း",
+                ],
+                "⚙️ ပင်မစာမျက်နှာစီမံခန့်ခွဲမှု": [
+                    "မိတ်ဆက်စာတန်းနှင့်ဗီဒီယိုပြုပြင်ခြင်း",
+                    "ဆိုင်အကြောင်း၊ ရန်ုင်သော ကားဘရန်းများ",
+                    "ဆက်သွယ်ရန် အကြောင်းအရာများ",
+                ],
+            },
+        },
+        myContributions: "",
+    },
+    techStack: ["laravel", 'blade', 'bootstrap'],
+    category: "own",
+    photos: [
+        "Hero.png",
+        "About.png",
+        "Contact.png",
+        "FrontendVehicle.png",
+        "FrontendRegulateMaintainance.png",
+        "FrontendCustomMaintainance.png",
+        "BackendBrands.png",
+        "BackendCategories.png",
+        "BackendVehicles.png",
+        "VehicleDetail.png",
+        "RegularMaintainanceCreate.png",
+        "BackendUserDetail.png",
+        "BackendUsers.png",
+        "BackendVehicleShow.png",
+        "Roles.png",
+    ],
+};
+
+const Projects = [DiaryApp, RiceMillApp, RealEstateApp, ShweAutomobile];
+
+export default Projects;

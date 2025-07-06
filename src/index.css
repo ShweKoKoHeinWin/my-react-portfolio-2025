@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
@@ -20,7 +21,7 @@
     --text-extra-large--line-height: calc(2.25 / 1.875);
     --text-ultra-large--line-height: calc(2.5 / 2.25);
 
-    --font-primary: "Oswald", sans-serif;
+    --font-primary: "Lato", sans-serif;
 
     --bg-primary: #ebffd8;
     --text-primary: #272932;
@@ -30,8 +31,8 @@
 }
 
 .mm {
-    --text-extra-small: 1rem;
-    --text-small: 1.1rem;
+    --text-extra-small: 0.9rem;
+    --text-small: 1.14rem;
     --text-medium: 1.25rem;
     --text-large: 1.5rem;
     --text-extra-large: 2rem;
@@ -59,6 +60,7 @@
 @theme {
     --breakpoint-xs: 30rem;
 
+    --font-osw: "Oswald", sans-serif;
     --font-ife: "IM Fell English", serif;
     --font-main: var(--font-primary);
 
@@ -80,7 +82,7 @@
     --color-background: var(--bg-primary);
 
     --color-primary: var(--color-primary);
-    --color-secondary: var(--color-secondary);
+    --color-secondary: var(--color-secondary);  
 
     --color-dark: #272932;
     --color-light: #10fee2;
@@ -115,7 +117,7 @@
 
 @layer base {
     body {
-        @apply bg-background text-foreground;
+        @apply bg-background text-foreground font-main;
     }
 }
 

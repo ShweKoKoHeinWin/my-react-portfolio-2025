@@ -28,10 +28,10 @@ const Navbar = () => {
     };
 
     const navLinkVariants = {
-        hidden: { opacity: 0, translateX: "100%" },
+        hidden: { opacity: 0, x: "100%" },
         visible: {
             opacity: 1,
-            translateX: 0,
+            x: 0,
             transition: SpringTransition(),
         },
     };
@@ -43,10 +43,10 @@ const Navbar = () => {
     return (
         <header className="fixed top-0 left-0 w-full backdrop-blur-md bg-purple/80 px-3 py-2 flex items-center justify-between gap-2 z-20">
             <motion.h1
-                initial={{ translateX: "-100%", opacity: 0 }}
-                animate={{ translateX: 0, opacity: 1 }}
+                initial={{ x: "-100%", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
                 transition={SpringTransition()}
-                className="max-w-1/2 text-center text-medium xs:text-large lg:text-extra-large font-bold text-skin group relative overflow-hidden"
+                className="max-w-[40%] text-center text-medium xs:text-large lg:text-extra-large font-bold text-skin group relative overflow-hidden"
             >
                 <div className="absolute top-0 left-0 w-full h-3 bg-skin shadow-xl shadow-light -translate-x-full group-hover:translate-x-0 transition-all duration-300  blur-sm animate-pulse" />
                 <div className="absolute bottom-0 left-0 w-full h-3 bg-skin shadow-xl shadow-light translate-x-full group-hover:translate-x-0 transition-all duration-300  blur-sm  animate-pulse" />

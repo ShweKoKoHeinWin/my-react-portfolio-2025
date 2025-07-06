@@ -5,6 +5,8 @@ import Projects from "./Pages/Projects";
 import About from "./Pages/About";
 import { ROUTEs } from "./constants";
 import Navbar from "./components/Navbar";
+import Image from "./components/ImageViewer";
+import Project from './components/ProjectViewer';
 
 
 function App() {
@@ -20,6 +22,9 @@ function App() {
 
                 <Route path={ROUTEs.PROJECTS} element={<Projects />} />
             </Routes>
+
+            <Image.Viewer/>
+            <Project.Viewer/>
         </div>
     );
 }
