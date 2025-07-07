@@ -3,11 +3,9 @@ import type { LangProp } from "./hook";
 export type ProjectCategoryType = "own" | "company" | "tutorial";
 
 export type ProjectCategoryProp = {
-    [lang in LangProp]: {
-        [key in ProjectCategoryType]: string;
-    };
+    keys: string[];
 } & {
-    colors: {
+    [lang in LangProp]: {
         [key in ProjectCategoryType]: string;
     };
 };
@@ -32,5 +30,3 @@ export type ActionProp = {
         detail: string;
     };
 };
-
-

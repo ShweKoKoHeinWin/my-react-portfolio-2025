@@ -21,7 +21,7 @@ const HeroSection = () => {
                 <h2 className="text-small xs:text-medium sm:text-large md:text-extra-large">
                     {HomeData.Hero[lang].greet}
                 </h2>
-                <h1 className="text-medium sm:text-large xs:text-extra-large sm:text-ultra-large drop-shadow-xs drop-shadow-dark font-bold bg-gradient-to-r from-orange via-blue to-skin bg-clip-text text-transparent">
+                <h1 className="text-medium sm:text-large lg:text-extra-large xl:text-ultra-large drop-shadow-xs drop-shadow-dark font-bold bg-gradient-to-r from-orange via-blue to-skin bg-clip-text text-transparent">
                     {AboutData.name[lang]}
                 </h1>
                 <h3 className="text-small text-primary md:text-large mb-2">

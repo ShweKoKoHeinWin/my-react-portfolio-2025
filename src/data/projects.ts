@@ -2,6 +2,11 @@ import { LANGs } from "../constants";
 import type { ProjectCategoryProp, ProjectProp } from "../types";
 
 export const Categories: ProjectCategoryProp = {
+    keys: [
+        'own',
+        'company',
+        'tutorial',
+    ],
     [LANGs.ENGLISH]: {
         own: "Own",
         company: "Company",
@@ -11,11 +16,6 @@ export const Categories: ProjectCategoryProp = {
         own: "ကိုယ်ပိုင်",
         company: "ကုမ္ပဏီ",
         tutorial: "သင်ခန်းစာ",
-    },
-    colors: {
-        own: "blue",
-        company: "orange",
-        tutorial: "purple",
     },
 };
 
@@ -180,12 +180,12 @@ export const RiceMillApp: ProjectProp = {
                 "ပစ္စည်းအပိုင်းပိုင်း ပို့ခြင်း/လက်ခံခြင်းများ မှတ်တမ်းတင်နိုင်ခြင်း",
                 "စျေးနှုန်း၊ တန်ဖိုး၊ လျှော့စျေးများကို လိုအပ်သလို ပြင်ဆင်တွက်ချက်နိုင်ခြင်း",
             ],
-            "🏭 စပါးစက်လုပ်ငန်း စီမံခန့်ခွဲမှု": {
-                "ဖောက်သည် စက်မှု": [
+            "🏭 စပါးကြိတ်ခွဲ စီမံခန့်ခွဲမှု": {
+                "ဖောက်သည်ကြိတ်ခွဲ": [
                     "စတင်ခြင်း - ဖောက်သည်ရွေးချယ်ခြင်း၊ အမည်၊ ပမာဏ၊ ယူနစ်အပါအဝင် အမဲစပါးမှတ်တမ်းတင်ခြင်း",
                     "ပြီးဆုံးခြင်း - ဝန်ဆောင်ခ၊ ငွေပေးချေမှု၊ အဓိကထွက်ကုန်နှင့် ဘေးထွက်ကုန်များ၊ ဂိုဒေါင်သို့သိမ်းဆည်းခြင်း",
                 ],
-                "ကိုယ်ပိုင် စက်မှု": [
+                "ကိုယ်ပိုင်ကြိတ်ခွဲ": [
                     "စတင်ခြင်း - အမဲစပါးရွေးချယ်ခြင်း၊ ပမာဏနှင့် စျေးနှုန်း မှတ်တမ်းတင်ခြင်း",
                     "ပြီးဆုံးခြင်း - ဝန်ဆောင်ခနှင့် ထွက်ကုန်များ (ပမာဏသာ) မှတ်တမ်းတင်ခြင်း",
                     "ကုန်ကျစရိတ်တွက်ချက်ခြင်း - စနစ်တကျ ဖော်မြူလာဖြင့် ထပ်မံတွက်ချက်နိုင်ခြင်း (လက်ရှိ၊ စတင်ချိန်၊ သတ်မှတ်စျေးနှုန်း)",
@@ -484,6 +484,17 @@ export const ShweAutomobile: ProjectProp = {
     ],
 };
 
-const Projects = [DiaryApp, RiceMillApp, RealEstateApp, ShweAutomobile];
+const ProjectPage = {
+    [LANGs.ENGLISH]: {
+        label: 'My Projects',
+        description: "Here’s a collection of projects I’ve worked on. Most of them were built by following YouTube tutorials. I didn’t fully understand everything, but I completed most of them and learned a lot along the way.",
+    }, 
+    [LANGs.MYANMAR]: {
+        label: 'ကျွန်တော့်ပရောဂျက်များ',
+        description: "ဒီမှာ ကျွန်တော် လုပ်ခဲ့တဲ့ Project များကို စုစည်းထားပါတယ်။ အများစုက YouTube Tutorial တွေကိုလိုက်နာပြီး တည်ဆောက်ခဲ့တာဖြစ်ပါတယ်။ အားလုံးကို နားမလည်သေးပေမယ့် အများစုကို ပြီးမြောက်အောင်လုပ်နိုင်ခဲ့ပြီး လေ့လာမှုတွေကိုလည်း ရရှိခဲ့ပါတယ်။",
+    }
+}
 
-export default Projects;
+const AllProjects = [DiaryApp, RiceMillApp, RealEstateApp, ShweAutomobile];
+
+export default {ProjectPage, AllProjects};

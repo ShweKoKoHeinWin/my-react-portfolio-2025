@@ -22,6 +22,7 @@ const Actions = {
         features: 'Features',
         techstack: 'Tech Stack',
         myContributions: 'My Contributions',
+        all: 'All',
     },
     [LANGs.MYANMAR]: {
         detail: 'အသေးစိတ်',
@@ -29,6 +30,7 @@ const Actions = {
         features: 'အင်္ဂါရပ်များ',
         techstack: 'နည်းပညာ',
         myContributions: 'တာဝန်ယူခဲ့သောအပိုင်း',
+        all: 'အားလုံး'
     }
 }
 

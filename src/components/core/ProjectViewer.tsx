@@ -6,6 +6,7 @@ import Carousel from "./Carousel";
 import Image from "./ImageViewer";
 import type { ProjectProp } from "../../types";
 import CTA from "../../data/cta";
+import Button from "./Button";
 
 const ProjectOpener = ({
     children,
@@ -25,12 +26,7 @@ const ProjectOpener = ({
             {children}
             <div className="absolute top-0 left-0 w-full h-full group">
                 <div className="scale-[0] group-hover:scale-[1] w-full h-full text-skin flex justify-center items-center transition-all duration-300">
-                    <button
-                        className="flex justify-center items-center flex-col gap-2 border-1 bg-background text-foreground rounded-2xl p-3 cursor-pointer hover:border-3"
-                        onClick={openViewer}
-                    >
-                        {CTA.Actions[lang].detail}
-                    </button>
+                    <Button.Neno label={CTA.Actions[lang].detail} size="small" onClick={openViewer} />
                 </div>
             </div>
         </div>
@@ -49,7 +45,7 @@ const ProjectViewer = () => {
     return (
         <>
             {open && <Backdrop setState={setOpen} />}
-            <div className="fixed inset-x-10 inset-y-10 z-30 bg-background">
+            <div className="fixed inset-0 md:inset-x-10 md:inset-y-10 z-30 bg-background">
                 <div className="border-2 w-full h-full overflow-x-hidden overflow-y-scroll p-5">
                     <div className="flex justify-between border-b">
                         <h3 className="text-large">{project.name} </h3>
@@ -71,14 +67,15 @@ const ProjectViewer = () => {
 
                         {project[lang].myContributions && (<>
                             <h3 className="text-medium"># {CTA.Actions[lang].myContributions} :</h3>
-                            <p className="text-small mb-5">
+                            <p className="text-small pl-5 mb-5">
                                 {project[lang].myContributions}
                             </p>
                         </>)}
                         <h3 className="text-medium">
                             {CTA.Actions[lang].features} :
                         </h3>
-                        <table className="border-separate border-spacing-y-4 pl-5 mb-5">
+                        {/* Large screen */}
+                        <table className="hidden lg:block border-separate border-spacing-y-4 pl-5 mb-5">
                             <tbody>
                                 {Object.keys(project[lang].features).map(
                                     (feature) => (
@@ -124,10 +121,53 @@ const ProjectViewer = () => {
                                 )}
                             </tbody>
                         </table>
+
+                        {/* small screen */}
+                        <div className="lg:hidden">
+                             {Object.keys(project[lang].features).map(
+                                    (feature) => (
+                                        <div key={feature} className="pb-3">
+                                            <h4 className="text-small align-top text-left pr-3">
+                                                {feature}
+                                            </h4>
+                                            <div className="pl-4 sm:pl-8">
+                                                
+                                                    {
+                                                        Array.isArray(project[lang].features[feature]) ?
+                                                            <ul className="list-inside list-disc leading-7 text-extra-small">
+                                                            {project[lang].features[feature].map((func, i) => (
+                                                                <li key={i}>
+                                                                    {func}
+                                                                </li>
+
+                                                            ))}
+                                                            </ul>
+                                                            : 
+                                                            ( <div className="pl-4 sm:pl-8 mb-5">
+                                                                {Object.keys(project[lang].features[feature]).map((funKey: string) => {
+                                                                    const featureGroup = project[lang].features[feature];
+                                                                    if (!Array.isArray(featureGroup)) {
+                                                                        return(<div key={funKey}>
+                                                                                    <h5 className="text-small align-top text-left pr-3">{funKey}</h5>
+                                                                                    <ul className="list-inside list-disc leading-7 text-extra-small pl-4 sm:pl-8">
+                                                                                        {featureGroup[funKey].map((text,j) => 
+                                                                                            <li key={j}>{text}</li>
+                                                                                        )}
+                                                                                    </ul>
+                                                                                </div>)}
+                                                                })}
+                                                            </div>)
+                                                    }
+                                            </div>
+                                        </div>
+                                    )
+                                )}
+                        </div>
+
                         <h3 className="text-medium">
                             {CTA.Actions[lang].techstack} :
                         </h3>
-                        <div className="flex flex-wrap gap-2 my-5">
+                        <div className="flex flex-wrap gap-2 px-5 my-5">
                             {project.techStack.map((tech, i) => (
                                 <span
                                     key={i}

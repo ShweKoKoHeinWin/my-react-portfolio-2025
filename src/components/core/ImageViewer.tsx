@@ -33,15 +33,15 @@ const ImageViewer = () => {
     return (
         <>
             {open && <Backdrop setState={setOpen} z="40" />}
-            <div className="fixed inset-x-10 inset-y-10 z-40 bg-background">
-                <div className="relative border-2 w-full h-full">
+            <div className="fixed inset-0 md:inset-x-10 md:inset-y-10 z-40 bg-background">
+                <div className="relative border-2 w-full h-full flex justify-center items-center">
                     <button
                         className="absolute top-0 right-0 p-3 bg-dark text-skin border-1 cursor-pointer"
                         onClick={closeViewer}
                     >
                         <X />
                     </button>
-                    <img src={image} alt="image" className="w-full h-full" />
+                    <img src={image} alt="image" className="w-full h-auto object-cover" />
                 </div>
             </div>
         </>
