@@ -1,5 +1,10 @@
 import { LANGs } from "../constants";
-import { DiaryApp, RealEstateApp, RiceMillApp, ShweAutomobile } from "./projects";
+import {
+    DiaryApp,
+    RealEstateApp,
+    RiceMillApp,
+    ShweAutomobile,
+} from "./projects";
 
 const Hero = {
     [LANGs.ENGLISH]: {
@@ -19,7 +24,10 @@ const Hero = {
     },
 };
 
-const Tech = {
+type TechProp = {
+    [key: string]: string[]
+}
+const Tech:TechProp = {
     frontend: [
         "html",
         "css",
@@ -28,12 +36,21 @@ const Tech = {
         "bootstrap",
         "typescript",
         "react",
+        'inertia',
         "livewire",
         "jquery",
     ],
-    backend: ["php", "laravel"],
+    backend: ["php", "laravel", "backpack", "filament"],
     database: ["mysql", "sqlite"],
-    tools: ["git", "github", "vscode", "postman"],
+    tools: [
+        "git",
+        "github",
+        "gitlab",
+        "bitbucket",
+        "vscode",
+        "postman",
+        "xampp",
+    ],
 };
 
 const Stats = {
@@ -55,7 +72,7 @@ const Stats = {
                 (count, tech) => count + tech.length,
                 0
             ),
-            label: 'Technologies'
+            label: "Technologies",
         },
     },
     [LANGs.MYANMAR]: {
@@ -76,32 +93,37 @@ const Stats = {
                 (count, tech) => count + tech.length,
                 0
             ),
-            label: 'နည်းပညာများ'
+            label: "နည်းပညာများ",
         },
     },
 };
 
 const FeaturedProjects = {
     [LANGs.ENGLISH]: {
-        label: 'Featured Projects',
-        description: 'A showcase of selected works that represent my best efforts and creative vision',
-        projects: [
-            DiaryApp,
-            RiceMillApp,
-            RealEstateApp,
-            ShweAutomobile,
-        ]
+        label: "Featured Projects",
+        description:
+            "A showcase of selected works that represent my best efforts and creative vision",
+        projects: [DiaryApp, RiceMillApp, RealEstateApp, ShweAutomobile],
     },
     [LANGs.MYANMAR]: {
-        label: 'အထူးပရောဂျက်များ',
-        description: 'ကျွန်တော့်အကောင်းဆုံးကြိုးစားမှုနှင့် တီထွင်မှုအမြင်ကို ကိုယ်စားပြုထားသော အလုပ်များ',
-        projects: [
-            DiaryApp,
-            RiceMillApp,
-            RealEstateApp,
-            ShweAutomobile
-        ]
+        label: "အထူးပရောဂျက်များ",
+        description:
+            "ကျွန်တော့်အကောင်းဆုံးကြိုးစားမှုနှင့် တီထွင်မှုအမြင်ကို ကိုယ်စားပြုထားသော အလုပ်များ",
+        projects: [DiaryApp, RiceMillApp, RealEstateApp, ShweAutomobile],
     },
-}
+};
 
-export default { Hero, Stats, Tech, FeaturedProjects };
+const TechStacks = {
+    [LANGs.ENGLISH]: {
+        label: "Technologies I Can Work With",
+        description:
+            "I’ve worked with these technologies. My skills are still developing, but I can use them, and I am always learning to improve.",
+    },
+    [LANGs.MYANMAR]: {
+        label: "ကျွန်တော် အသုံးပြုနိုင်တဲ့ နည်းပညာများ",
+        description:
+            "ဒီနည်းပညာတွေကို အလုပ်တွေမှာ အသုံးပြုဖူးပါတယ်။ ကျွမ်းကျင်မှုနည်းသေးပေမယ့် အသုံးပြုနိုင်ပါတယ်၊ တိုးတက်ဖို့လည်း အမြဲလေ့လာနေပါတယ်။",
+    },
+};
+
+export default { Hero, Stats, Tech, FeaturedProjects, TechStacks };

@@ -20,10 +20,10 @@ const NeonButton = ({
                 className={`cursor-pointer relative px-4 py-2 ring-2 ring-secondary  overflow-hidden rounded-lg inline-flex justify-center items-center group hover:translate-y-[-10%] hover:shadow-lg hover:shadow-secondary active:scale-[0.9] active:translate-y-0 active:shadow-2xl active:shadow-secondary transition-all duration-300`}
             >
                 <div
-                    className={`absolute left-0 top-0 w-full h-full z-0 bg-secondary -translate-x-full -translate-y-1/2 group-hover:translate-0 transition-all duration-300`}
+                    className={`absolute left-0 top-0 w-full h-full z-0 bg-secondary -translate-x-5/4 -translate-y-1/2 group-hover:translate-0 transition-all duration-300`}
                 ></div>
                 <div
-                    className={`absolute left-0 bottom-0 w-full h-full z-0 bg-secondary translate-x-full translate-y-1/2 group-hover:translate-0 transition-all duration-300`}
+                    className={`absolute left-0 bottom-0 w-full h-full z-0 bg-secondary translate-x-5/4 translate-y-1/2 group-hover:translate-0 transition-all duration-300`}
                 ></div>
                 <span
                     className={`text-secondary ${textSizes} font-bold group-hover:text-light z-10`}

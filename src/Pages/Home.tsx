@@ -2,6 +2,7 @@
 import FeaturedProjectsSection from "./sections/FeaturedProjectsSection";
 import HeroSection from "./sections/HeroSection";
 import StatsSection from "./sections/StatsSection";
+import TechStackSection from "./sections/TechStackSection";
 
 const Home = () => {
     return (
@@ -12,6 +13,8 @@ const Home = () => {
             <StatsSection/>
             {/* Featured Projects */}
             <FeaturedProjectsSection/>
+            {/* TechStacks */}
+            <TechStackSection/>
         </main>
     );
 };

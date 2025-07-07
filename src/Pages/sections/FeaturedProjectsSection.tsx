@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
+import Button from "../../components/core/Button";
 import Carousel from "../../components/core/Carousel";
 import Image from "../../components/core/ImageViewer";
 import Project from "../../components/core/ProjectViewer";
 import { useGlobalContext } from "../../contexts/globalContext";
 import HomeData from "../../data/home";
 import { Categories } from "../../data/projects";
+import { ROUTEs } from "../../constants";
 const FeaturedProjectsSection = () => {
     const { lang } = useGlobalContext();
     return (
@@ -37,7 +40,7 @@ const FeaturedProjectsSection = () => {
                             </Carousel>
                         </div>
                         <Project.Opener project={project}>
-                            <div className="flex justify-between items-center">
+                            <div className="flex justify-between items-center gap-1">
                                 <h3 className="text-medium font-bold text-secondary mb-2">
                                     {project.name}
                                 </h3>
@@ -62,6 +65,9 @@ const FeaturedProjectsSection = () => {
                     </div>
                 ))}
             </div>
+            <Link to={ROUTEs.PROJECTS} className="flex justify-center">
+                <Button.Neno label="View All" />
+            </Link>
         </section>
     );
 };
