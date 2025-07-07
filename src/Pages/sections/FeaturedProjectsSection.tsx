@@ -7,16 +7,49 @@ import { useGlobalContext } from "../../contexts/globalContext";
 import HomeData from "../../data/home";
 import { Categories } from "../../data/projects";
 import { ROUTEs } from "../../constants";
+import { motion } from "framer-motion";
+import { SpringTransition } from "../../utils";
+
+const sectionVariant = {
+    initial: {},
+    inView: {
+        transition: {
+            staggerChildren: 0.3,
+        },
+    },
+};
+
+const sectionChildrenVariant = {
+    initial: {
+        scale: 0,
+    },
+    inView: {
+        scale: 1,
+    },
+};
+
 const FeaturedProjectsSection = () => {
     const { lang } = useGlobalContext();
     return (
-        <section className="px-4 py-8">
-            <h2 className="text-center text-extra-large">
+        <motion.section
+            variants={sectionVariant}
+            initial="initial"
+            whileInView="inView"
+            transition={SpringTransition()}
+            className="px-4 py-8"
+        >
+            <motion.h2
+                variants={sectionChildrenVariant}
+                className="text-center text-extra-large"
+            >
                 {HomeData.FeaturedProjects[lang].label}
-            </h2>
-            <p className="text-center text-medium">
+            </motion.h2>
+            <motion.p
+                variants={sectionChildrenVariant}
+                className="text-center text-medium"
+            >
                 {HomeData.FeaturedProjects[lang].description}
-            </p>
+            </motion.p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 py-8">
                 {HomeData.FeaturedProjects[lang].projects.map((project, i) => (
                     <div
@@ -68,7 +101,7 @@ const FeaturedProjectsSection = () => {
             <Link to={ROUTEs.PROJECTS} className="flex justify-center">
                 <Button.Neno label="View All" />
             </Link>
-        </section>
+        </motion.section>
     );
 };
 
