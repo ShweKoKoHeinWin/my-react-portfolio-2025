@@ -27,14 +27,14 @@ const ProjectCard = ({ project }: { project: ProjectProp }) => {
             </div>
             <Project.Opener project={project}>
                 <div className="flex justify-between items-center gap-1">
-                    <h3 className="text-medium font-bold text-secondary mb-2">
+                    <h3 className="text-medium font-bold text-secondary mb-2 leading-[1.2]">
                         {project.name}
                     </h3>
                     <span className="bg-skin text-blue font-bold border-1 text-extra-small rounded-lg p-2">
                         {Categories[lang][project.category]}
                     </span>
                 </div>
-                <p className="text-foreground text-extra-small">
+                <p className="text-foreground text-extra-small mt-2">
                     {project[lang].description}
                 </p>
                 <div className="flex flex-wrap gap-2 mt-4">

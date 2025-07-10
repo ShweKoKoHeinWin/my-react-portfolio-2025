@@ -50,6 +50,8 @@ const Tech:TechProp = {
         "vscode",
         "postman",
         "xampp",
+        "vercel",
+        'netlify',
     ],
 };
 
