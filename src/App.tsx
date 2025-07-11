@@ -7,6 +7,7 @@ import { ROUTEs } from "./constants";
 import Navbar from "./components/Navbar";
 import Image from "./components/core/ImageViewer";
 import Project from './components/core/ProjectViewer';
+import Contact from "./Pages/Contact";
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
                 <Route path={ROUTEs.ABOUT} element={<About />} />
 
                 <Route path={ROUTEs.PROJECTS} element={<Projects />} />
+
+                <Route path={ROUTEs.CONTACT} element={<Contact/>} />
             </Routes>
 
             <Image.Viewer/>
