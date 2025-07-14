@@ -20,8 +20,8 @@ const Projects = () => {
         return projects;
     }, [selectedType]);
     return (
-        <main className="relative min-h-screen overflow-hidden px-5 pt-20">
-            <h1 className="text-center font-bold text-medium sm:text-large  lg:text-extra-large text-primary">
+        <main className="relative min-h-screen overflow-hidden px-8 py-30 lg:py-20">
+            <h1 className="text-center font-bold text-large  lg:text-extra-large text-primary">
                 {ProjectData.ProjectPage[lang].label}
             </h1>
             <p className="text-medium text-center text-secondary">

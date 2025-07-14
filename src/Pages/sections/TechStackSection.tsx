@@ -33,7 +33,7 @@ const TechStackSection = () => {
         >
             <motion.h2
                 variants={sectionChildrenVariant}
-                className="text-extra-large text-center"
+                className="text-center font-bold text-large  lg:text-extra-large text-primary"
             >
                 {HomeData.TechStacks[lang].label}
             </motion.h2>

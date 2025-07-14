@@ -38,7 +38,7 @@ const FeaturedProjectsSection = () => {
         >
             <motion.h2
                 variants={sectionChildrenVariant}
-                className="text-center text-extra-large"
+                className="text-center font-bold text-large  lg:text-extra-large text-primary"
             >
                 {HomeData.FeaturedProjects[lang].label}
             </motion.h2>

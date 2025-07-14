@@ -19,6 +19,7 @@ const ProjectCard = ({ project }: { project: ProjectProp }) => {
                                 <img
                                     src={`/images/${project.name}/${photo}`}
                                     alt=""
+                                    loading="lazy"
                                 />
                             </Image.Opener>
                         </Carousel.CarouselItem>

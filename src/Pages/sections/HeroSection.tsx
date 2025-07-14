@@ -16,7 +16,7 @@ const HeroSection = () => {
                 initial={{ translateX: "-100%" }}
                 animate={{ translateX: 0 }}
                 transition={{ ...SpringTransition() }}
-                className=" text-secondary font-semibold px-5 py-20 lg:py-3 my-auto flex flex-col justify-center items-start"
+                className=" text-secondary font-semibold my-auto flex flex-col justify-center items-start"
             >
                 <h2 className="text-small xs:text-medium sm:text-large md:text-extra-large">
                     {HomeData.Hero[lang].greet}
@@ -47,7 +47,7 @@ const HeroSection = () => {
                         src="/images/my_img1.jpg"
                         alt="Profile"
                         width={400}
-                        height={400}
+                        loading="lazy"
                         className="relative rounded-full border-4 border-white/20 shadow-2xl"
                     />
                 </motion.div>

@@ -1,25 +1,19 @@
+import AboutMeSection from "./sections/AboutMeSection";
+import AboutMyGoalSection from "./sections/AboutMyGoalSection";
+import AboutSkillLevel from "./sections/AboutSkillLevel";
+import AboutTechJourney from "./sections/AboutTechJourney";
 
 const About = () => {
     return (
-        <div>
-            <div className="min-h-screen">
-                <section
-                    id="about"
-                    data-section="hero"
-                    className="min-h-screen"
-                ></section>
-                <section
-                    id="about"
-                    data-section="about"
-                    className="min-h-screen"
-                ></section>
-                <section
-                    id="features"
-                    data-section="features"
-                    className="min-h-screen"
-                ></section>
-            </div>
-        </div>
+       <main className="relative min-h-screen overflow-hidden px-8 py-30 lg:py-20">
+            <AboutMeSection/>
+
+            <AboutMyGoalSection/>
+
+            <AboutTechJourney/>
+
+            <AboutSkillLevel/>
+        </main>
     );
 };
 

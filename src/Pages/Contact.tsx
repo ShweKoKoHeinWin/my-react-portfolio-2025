@@ -6,8 +6,8 @@ import { Facebook, Github, Mail, MapPin, Phone } from "lucide-react";
 const Contact = () => {
     const { lang } = useGlobalContext();
     return (
-        <main className="min-h-relative pt-20 px-8">
-            <h1 className="text-center font-bold text-medium sm:text-large  lg:text-extra-large text-primary">
+        <main className="min-h-relative px-8 py-30 lg:py-20">
+            <h1 className="text-center font-bold text-large  lg:text-extra-large text-primary">
                 {ContactData.Contact[lang].title}
             </h1>
             <p className="text-medium text-center text-secondary">

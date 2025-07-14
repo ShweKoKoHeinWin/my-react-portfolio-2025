@@ -6,7 +6,7 @@ import TechStackSection from "./sections/TechStackSection";
 
 const Home = () => {
     return (
-        <main className="relative min-h-screen overflow-hidden pt-20">
+        <main className="relative min-h-screen overflow-hidden px-8 py-30 lg:py-20">
             {/* Hero Section */}
             <HeroSection/>
             {/* Stats Section */}
