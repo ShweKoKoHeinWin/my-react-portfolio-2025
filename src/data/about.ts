@@ -25,7 +25,7 @@ const AboutMe = {
             { name: "Inertia.js", level: "25%" },
             { name: "MySQL", level: "50%" },
             { name: "Tailwind", level: "30%" },
-            { name: "Git", level: "40%" },
+            { name: "Git", level: "30%" },
         ],
     },
     [LANGs.ENGLISH]: {

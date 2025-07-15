@@ -2,20 +2,22 @@ import ContactData from "../data/contact";
 import { useGlobalContext } from "../contexts/globalContext";
 import Button from "../components/core/Button";
 import { Facebook, Github, Mail, MapPin, Phone } from "lucide-react";
+import { motion } from "framer-motion";
+import { SpringTransition } from "../utils";
 
 const Contact = () => {
     const { lang } = useGlobalContext();
     return (
         <main className="min-h-relative px-8 py-30 lg:py-20">
-            <h1 className="text-center font-bold text-large  lg:text-extra-large text-primary">
+            <motion.h1 initial={{scale: 0.8}} whileInView={{scale: 1}} transition={SpringTransition()} className="text-center font-bold text-large  lg:text-extra-large text-primary">
                 {ContactData.Contact[lang].title}
-            </h1>
-            <p className="text-medium text-center text-secondary">
+            </motion.h1>
+            <motion.p initial={{scale: 0.8}} whileInView={{scale: 1}} transition={SpringTransition()} className="text-medium text-center text-secondary">
                 {ContactData.Contact[lang].description}
-            </p>
+            </motion.p>
 
             <div className="text-small grid md:grid-cols-12 gap-5 py-5">
-                <form
+                <motion.form initial={{scale: 0.8}} whileInView={{scale: 1}} transition={SpringTransition()} 
                     className="space-y-6 col-span-12 lg:col-span-5 ring-2 ring-secondary rounded-xl p-4"
                     action="#"
                     method="POST"
@@ -70,9 +72,9 @@ const Contact = () => {
                             size="small"
                         />
                     </div>
-                </form>
+                </motion.form>
 
-                <div className="col-span-12 lg:col-span-7">
+                <motion.div initial={{scale: 0.8}} whileInView={{scale: 1}} transition={SpringTransition()}  className="col-span-12 lg:col-span-7">
                     <div className="ring-2 ring-secondary h-fit rounded-xl p-3">
                         <h3 className="text-large font-bold text-center text-secondary">
                             {ContactData.ContactInfo[lang].title}
@@ -139,7 +141,7 @@ const Contact = () => {
                             <Facebook size={25} />
                         </a>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </main>
     );

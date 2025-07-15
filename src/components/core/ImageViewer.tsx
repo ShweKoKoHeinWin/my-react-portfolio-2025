@@ -2,6 +2,7 @@ import { Eye, X } from "lucide-react";
 import { useGlobalContext } from "../../contexts/globalContext";
 import Backdrop from "./Backdrop";
 import type { ReactNode } from "react";
+import {motion} from 'framer-motion'
 
 const ImageOpener = ({ children, image }: {children: ReactNode; image: string}) => {
     const { setOpen, setImage } = useGlobalContext().imageViewer;
@@ -33,7 +34,10 @@ const ImageViewer = () => {
     return (
         <>
             {open && <Backdrop setState={setOpen} z="40" />}
-            <div className="fixed inset-0 md:inset-x-10 md:inset-y-10 z-40 bg-background">
+            <motion.div initial={{ scale: 0, y: '100vh' }}
+                    animate={{ scale: 1, y: 0 }}
+                    exit={{ scale: 0, y: '100vh' }}
+                    transition={{ duration: 0.3 }}  className="fixed inset-0 md:inset-x-10 md:inset-y-10 z-40 bg-background">
                 <div className="relative border-2 w-full h-full flex justify-center items-center overflow-y-scroll">
                     <button
                         className="absolute top-0 right-0 p-3 bg-dark text-skin border-1 cursor-pointer"
@@ -43,7 +47,7 @@ const ImageViewer = () => {
                     </button>
                     <img src={image} alt="image" className="w-full h-auto object-cover" />
                 </div>
-            </div>
+            </motion.div>
         </>
     );
 };

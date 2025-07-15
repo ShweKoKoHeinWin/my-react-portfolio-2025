@@ -13,8 +13,8 @@ const HeroSection = () => {
     return (
         <section className="grid grid-cols-1 lg:grid-cols-2">
             <motion.div
-                initial={{ translateX: "-100%" }}
-                animate={{ translateX: 0 }}
+                initial={{ x: "-10vw" }}
+                whileInView={{ x: 0 }}
                 transition={{ ...SpringTransition() }}
                 className=" text-secondary font-semibold my-auto flex flex-col justify-center items-start"
             >
@@ -36,15 +36,15 @@ const HeroSection = () => {
                     />
                 </Link>
             </motion.div>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center mt-5">
                 <motion.div
                     className="relative"
-                    animate={{ scale: [1.2, 1] }}
+                    whileInView={{ scale: [1.2, 1] }}
                     transition={SpringTransition()}
                 >
                     <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-3xl opacity-50 animate-pulse"></div>
                     <img
-                        src="/images/my_img1.jpg"
+                        src="/images/my_image1.png"
                         alt="Profile"
                         width={400}
                         loading="lazy"

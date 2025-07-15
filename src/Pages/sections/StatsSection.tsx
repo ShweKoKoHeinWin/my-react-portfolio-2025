@@ -7,7 +7,7 @@ const parentVariant = {
     hidden: {},
     show: {
         transition: {
-            staggerChildren: .3,
+            staggerChildren: .2,
         }
     }
 }
@@ -26,7 +26,7 @@ const StatsSection = () => {
     return (
         <section className="py-16 relative">
             <div className="mx-auto px-4 sm:px-6 lg:px-8">
-                <motion.div variants={parentVariant} initial="hidden" animate='show' className="text-center text-medium text-primary grid grid-cols-2 md:grid-cols-4 gap-8">
+                <motion.div variants={parentVariant} initial="hidden" whileInView='show' className="text-center text-medium text-primary grid grid-cols-2 md:grid-cols-4 gap-8">
                     <motion.div variants={childVariant}>
                         <div className="text-extra-large font-bold mb-2">
                             {HomeData.Stats[lang].projects.count} +

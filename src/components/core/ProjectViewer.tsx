@@ -7,6 +7,7 @@ import Image from "./ImageViewer";
 import type { ProjectProp } from "../../types";
 import CTA from "../../data/cta";
 import Button from "./Button";
+import {motion} from 'framer-motion'
 
 const ProjectOpener = ({
     children,
@@ -45,7 +46,11 @@ const ProjectViewer = () => {
     return (
         <>
             {open && <Backdrop setState={setOpen} />}
-            <div className="fixed inset-0 md:inset-x-10 md:inset-y-10 z-30 bg-background">
+            <motion.div initial={{ scale: 0, y: '100vh' }}
+                    animate={{ scale: 1, y: 0 }}
+                    exit={{ scale: 0, y: '100vh' }}
+                    transition={{ duration: 0.3 }} 
+                    className="fixed inset-0 md:inset-x-10 md:inset-y-10 z-30 bg-background">
                 <div className="border-2 w-full h-full overflow-x-hidden overflow-y-scroll p-5">
                     <div className="flex justify-between border-b">
                         <h3 className="text-large">{project.name} </h3>
@@ -195,7 +200,7 @@ const ProjectViewer = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     );
 };

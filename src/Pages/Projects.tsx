@@ -5,6 +5,8 @@ import ProjectData, { Categories } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
 import CTA from "../data/cta";
 import type { ProjectCategoryType } from "../types";
+import { motion } from "framer-motion";
+import { SpringTransition } from "../utils";
 
 const Projects = () => {
     const { lang } = useGlobalContext();
@@ -49,9 +51,9 @@ const Projects = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 py-8">
                     {filteredProjects.map((project, i) => (
-                        <div key={i}>
+                        <motion.div initial={{scale: 0.8}} animate={{scale: 1}} transition={SpringTransition()} key={i}>
                             <ProjectCard project={project} />
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </section>
