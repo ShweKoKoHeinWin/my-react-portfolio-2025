@@ -2,6 +2,7 @@ import AboutData from '../../data/about'
 import { useGlobalContext } from '../../contexts/globalContext'
 import {motion} from 'framer-motion'
 import { SpringTransition } from '../../utils';
+import Button from '../../components/core/Button';
 
 const AboutMeSection = () => {
     const {lang} = useGlobalContext();
@@ -23,9 +24,13 @@ const AboutMeSection = () => {
                     <h3 className="text-large text-primary font-semibold">
                         🧑🏻{AboutData.AboutMe[lang].whoami.title}
                     </h3>
-                    <p className="text-small indent-15">
+                    <p className="text-small indent-15 mb-5">
                         {AboutData.AboutMe[lang].whoami.description}
                     </p>
+                    <a href="/my_resume.pdf" target="_blank" >
+                        <Button.Neno label='My Resume' />
+                    </a>
+                    
                 </motion.div>
             </div>
         </section>

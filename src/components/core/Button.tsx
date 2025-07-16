@@ -37,39 +37,4 @@ const NeonButton = ({
         );
 };
 
-const NormalButton = ({ label, type = "normal", size = 'medium' }: {label: string, type: 'primary' | 'secondary' | 'normal', size: 'small' | 'medium' | 'large'}) => {
-    let class_name = '';
-    switch (size) {
-        case 'small':
-            class_name += 'text-extra-small p-1 ';
-            break;
-
-        case 'medium':
-            class_name += 'text-small p-2 ';
-            break;
-    
-        default:
-            class_name += 'text-medium p-3 ';
-            break;
-    }
-
-    class_name += 'rounded-xl border-1 bg-transparent '
-
-    switch (type) {
-        case 'primary':
-            class_name += 'border-primary text-primary hover:bg-primary hover:text-secondary';
-            break;
-
-        case 'secondary':
-            class_name += 'border-secondary text-secondary hover:bg-secondary hover:text-light';
-            break;
-    
-        default:
-            class_name += 'border-orange text-orange hover:bg-orange hover:text-skin';
-            break;
-    }
-    
-    return <button className={`${class_name} transition-all duration-300`}>{label}</button>;
-};
-
-export default { Neno: NeonButton, Normal: NormalButton };
+export default { Neno: NeonButton };
