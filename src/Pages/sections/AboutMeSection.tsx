@@ -27,7 +27,7 @@ const AboutMeSection = () => {
                     <p className="text-small indent-15 mb-5">
                         {AboutData.AboutMe[lang].whoami.description}
                     </p>
-                    <a href="/my_resume.pdf" target="_blank" >
+                    <a href="/new_resume.pdf" target="_blank" >
                         <Button.Neno label='My Resume' />
                     </a>
                     

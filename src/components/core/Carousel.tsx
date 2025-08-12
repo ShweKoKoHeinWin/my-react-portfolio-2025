@@ -1,30 +1,44 @@
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 import { useState, type ReactNode } from "react";
 
-const CarouselItem = ({ children }: {children: ReactNode}) => {
+const CarouselItem = ({ children }: { children: ReactNode }) => {
     return <div className="min-w-full h-full">{children}</div>;
 };
 
-const CarouselControl = ({ goPrev, goNext }: {goPrev: () => void, goNext: () => void}) => {
+const CarouselControl = ({
+    goPrev,
+    goNext,
+    curIndex,
+    lastIndex
+}: {
+    goPrev: () => void;
+    goNext: () => void;
+    curIndex: number;
+    lastIndex: number;
+}) => {
     return (
         <>
-            <button
-                className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary/50 text-skin rounded-full p-1 hover:bg-primary/30"
-                onClick={goPrev}
-            >
-                <ArrowLeftCircle />
-            </button>
-            <button
-                className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 bg-primary/50 text-skin rounded-full p-1 hover:bg-primary/30"
-                onClick={goNext}
-            >
-                <ArrowRightCircle />
-            </button>
+            {curIndex !== 0 && (
+                <button
+                    className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary/50 text-skin rounded-full p-1 hover:bg-primary/30"
+                    onClick={goPrev}
+                >
+                    <ArrowLeftCircle />
+                </button>
+            )}
+            {curIndex !== lastIndex && (
+                <button
+                    className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 bg-primary/50 text-skin rounded-full p-1 hover:bg-primary/30"
+                    onClick={goNext}
+                >
+                    <ArrowRightCircle />
+                </button>
+            )}
         </>
     );
 };
 
-const Carousel = ({ children }: {children: ReactNode[]}) => {
+const Carousel = ({ children }: { children: ReactNode[] }) => {
     const [curIndex, setCurIndex] = useState(0);
     const lastIndex = children.length - 1;
     const goPrev = () =>
@@ -43,7 +57,7 @@ const Carousel = ({ children }: {children: ReactNode[]}) => {
                         {children}
                     </div>
                 </div>
-                <CarouselControl goPrev={goPrev} goNext={goNext} />
+                <CarouselControl goPrev={goPrev} goNext={goNext} lastIndex={lastIndex} curIndex={curIndex} />
             </div>
 
             <div className="text-center text-extra-small text-primary">

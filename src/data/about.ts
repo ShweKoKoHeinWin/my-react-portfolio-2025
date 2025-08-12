@@ -5,6 +5,10 @@ const name = {
     [LANGs.MYANMAR]: "ရွှေကိုကိုဟိန်းဝင်း",
 };
 
+const certificates = [
+    'fcc-legacy-js-algo-data.png'
+]
+
 const AboutMe = {
     mySkills: {
         title: {
@@ -16,16 +20,20 @@ const AboutMe = {
             { name: "CSS", level: "40%" },
             { name: "JavaScript", level: "65%" },
             { name: "jQuery", level: "50%" },
-            { name: "PHP", level: "70%" },
+            { name: "PHP", level: "60%" },
             { name: "Laravel", level: "55%" },
             { name: "Livewire", level: "50%" },
             { name: "Bootstrap", level: "75%" },
             { name: "Backpack", level: "50%" },
             { name: "React", level: "40%" },
             { name: "Inertia.js", level: "25%" },
-            { name: "MySQL", level: "50%" },
+            { name: "MySQL", level: "40%" },
             { name: "Tailwind", level: "30%" },
             { name: "Git", level: "30%" },
+            { name: "Node Js", level: "20%"},
+            { name: "Mongo Db", level: "5%"},
+            { name: "Mongoose", level: "5%"},
+            { name: "Express Js", level: "8%"},
         ],
     },
     [LANGs.ENGLISH]: {
@@ -52,7 +60,7 @@ const AboutMe = {
                         duration: "Oct 2023 - MAR 2024",
                         company: "Tech's Digital Pocket",
                         description:
-                            "Assisted in maintaining and improving the company’s real estate platform. Rebuilt frontend components for enterprise deployment and collaborated with senior developers to meet client requirements.",
+                            "Assisted in maintaining and improving the company’s real estate platform. Rebuilt frontend components for enterprise deployment to meet client requirements.",
                     },
                 ],
             },
@@ -72,6 +80,10 @@ const AboutMe = {
                 title: "🎓 Education",
                 description: "BEHS Seikgyikanaungto (High School Graduated)",
             },
+            certificates: {
+                title: "🎖 Certificates & Diploma",
+                images: certificates
+            }
         },
         mygoal: {
             title: "🎯My Goals",
@@ -93,6 +105,7 @@ const AboutMe = {
                 ],
             },
         },
+        
     },
     [LANGs.MYANMAR]: {
         title: "ကျွန်တော့်အကြောင်း",
@@ -118,13 +131,17 @@ const AboutMe = {
                         duration: "‌အောက်တိုဘာ ၂၀၂၃ - မတ် ၂၀၂၄",
                         company: "Tech's Digital Pocket",
                         description:
-                            "ကုမ္ပဏီ၏အိမ်ခြံမြေပလက်ဖောင်းကို ထိန်းသိမ်းခြင်းနှင့် မြှင့်တင်ရာတွင် ကူညီပေးခဲ့သည်။ လုပ်ငန်းဖြန့်ကျက်မှုအတွက် ရှေ့တန်းအစိတ်အပိုင်းများကို ပြန်လည်တည်ဆောက်ပြီး ဖောက်သည်လိုအပ်ချက်များနှင့်ကိုက်ညီစေရန် အကြီးတန်း developer များနှင့် ပူးပေါင်းဆောင်ရွက်ခဲ့ပါသည်",
+                            "ကုမ္ပဏီ၏အိမ်ခြံမြေပလက်ဖောင်းကို ထိန်းသိမ်းခြင်းနှင့် မြှင့်တင်ရာတွင် ကူညီပေးခဲ့သည်။ လုပ်ငန်းဖြန့်ကျက်မှုအတွက် ရှေ့တန်းအစိတ်အပိုင်းများကို ပြန်လည်တည်ဆောက်ပြီး ဖောက်သည်လိုအပ်ချက်များနှင့်ကိုက်ညီစေရန် ဆောင်ရွက်ခဲ့ပါသည်",
                     },
                 ],
             },
             education: {
                 title: "🎓 ကျောင်းပညာရေး",
                 description: "BEHS ဆိပ်ကြီးခနောင်တို (အထက်တန်းအောင်)",
+            },
+            certificates: {
+                title: "အထောက်အထားလက်မှတ်များနှင့် ဒီပလိုမာများ",
+                images: certificates
             },
             journey: {
                 title: "👣 ကျွန်တော်ဘယ်လိုရောက်လာခဲ့သလဲ",

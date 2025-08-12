@@ -1,3 +1,4 @@
+import AboutCertificateSection from "./sections/AboutCertificateSection";
 import AboutMeSection from "./sections/AboutMeSection";
 import AboutMyGoalSection from "./sections/AboutMyGoalSection";
 import AboutSkillLevel from "./sections/AboutSkillLevel";
@@ -13,6 +14,8 @@ const About = () => {
             <AboutTechJourney/>
 
             <AboutSkillLevel/>
+
+            <AboutCertificateSection/>
         </main>
     );
 };
